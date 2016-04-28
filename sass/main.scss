@@ -1,0 +1,152 @@
+// MAIN
+@import "variables";
+@import "mixins";
+@import "compass";
+@import "compass/reset";
+
+//
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    font-size: 100%;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    position: relative;
+    height: 100%;
+}
+
+div.container,
+.container {
+    position: relative;
+    @include clearfix;
+    width: 960px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-weight: $bold;
+}
+//
+body.front-page {
+
+    section {
+        position: relative;
+        min-height: 40rem;
+        @include viewport-unit(height, 100vh);
+        @include clearfix;
+    }
+
+    section.cover {
+        background-color: $white;
+
+        .container {
+            min-height: inherit;
+            height: inherit;
+        }
+
+        header {
+            h1 {
+                position: relative;
+                margin-top: $padding-large;
+                width: $col;
+                overflow: hidden;
+
+                img {
+                    width: inherit;
+                }
+                span {
+                    position: absolute;
+                    left: 9999px;
+                }
+            }
+        }
+        h2.tagline {
+            font-size: 5rem;
+            color: $purple;
+            padding-bottom: 0.8em;
+
+            background-image: url("../img/waves.svg");
+            background-size: 100% auto;
+            background-position: 0 bottom;
+            background-repeat: no-repeat;
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);        
+            top: 40%;
+        }
+    }
+
+    section.about {
+        background-color: $purple;
+        color: $white;
+
+        .container {
+            top: 50%;
+            transform: translateY(-50%);        
+        }
+
+        header {
+            margin: 0 $padding-normal;
+            padding-bottom: $padding-normal;
+            h2 {
+                font-size: 3.5rem;
+                line-height: 1.2em;
+                span {
+                    display: block;
+
+                    &:last-child {
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5em;
+            padding: 0 $padding-normal;
+        }
+    }
+}
+
+// RESPONSIVE
+// if smaller then 960px
+@media screen and (max-width: 960px) {
+
+    div.container,
+    .container {
+        width: auto;
+    }
+
+    body.front-page {
+        section {
+            @include viewport-unit(height, 100vw);
+            
+        }
+        section.cover {
+            .container {
+                padding: $padding-normal;
+            }
+            header {
+                h1 {
+                    margin-top: $padding-normal;
+                }
+            }
+            h2.tagline {
+                font-size: 12vw;
+            }
+        }
+        section.about {
+            padding: 0;
+            header {
+                h2 {
+                    font-size: 8vw;
+               }
+            } 
+        }
+    }
+
+}//@media $mid

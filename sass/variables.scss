@@ -1,0 +1,33 @@
+// variables.scss
+// Global variables
+
+// Dimensions
+// 1 REM = 16px
+// 5 rem = 80px
+// 10 rem = 160px
+// 20 rem = 320px
+$col: 10rem;
+//
+$wide:		$col * 8;	// 1280px
+$mid:		$col * 6;	// 960px
+$small:		$col * 5;	// 800px
+$mobile:	414px; // iPhone 6s
+
+//
+$padding-large: 	$col / 2;
+$padding-normal: 	$col / 4;
+$padding-small: 	$col / 8;
+
+$header-height:	$col;
+
+
+// Colors
+$red: 		#ff6633;
+$white: 	#ffffff;
+$yellow: 	#ffcc33;
+$purple: 	#3d245c;
+
+// Fonts
+$bold: 		700;
+$medium: 	500;
+$normal: 	400;

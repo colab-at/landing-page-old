@@ -1,0 +1,223 @@
+/**
+ * Fix for vw, vh, vmin, vmax on iOS 7.
+ * http://caniuse.com/#feat=viewport-units
+ *
+ * @author BenMorel
+ * https://gist.github.com/BenMorel/e9e34c08360ebbbd0634
+ *
+ * This fix works by replacing viewport units with px values on known screen sizes.
+ *
+ * iPhone 6 and 6 Plus cannot run iOS 7, so are not targeted by this fix.
+ * Target devices running iOS 8+ will incidentally execute the media query,
+ * but this will still produce the expected result; so this is not a problem.
+ *
+ * As an example, replace:
+ *
+ *   height: 50vh;
+ *   font-size: 5vmin;
+ *
+ * with:
+ *
+ *   @include viewport-unit(height, 50vh);
+ *   @include viewport-unit(font-size, 5vmin);
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+  font-size: 100%;
+  color: #333;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  position: relative;
+  height: 100%; }
+
+div.container,
+.container {
+  position: relative;
+  overflow: hidden;
+  *zoom: 1;
+  width: 960px;
+  margin: 0 auto; }
+
+h1, h2, h3 {
+  font-weight: 700; }
+
+body.front-page section {
+  position: relative;
+  min-height: 40rem;
+  height: 100vh;
+  overflow: hidden;
+  *zoom: 1; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    body.front-page section {
+      height: 1024px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+    body.front-page section {
+      height: 768px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 480px) and (orientation: portrait) {
+    body.front-page section {
+      height: 480px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 480px) and (orientation: landscape) {
+    body.front-page section {
+      height: 320px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) {
+    body.front-page section {
+      height: 568px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 568px) and (orientation: landscape) {
+    body.front-page section {
+      height: 320px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 375px) and (device-height: 667px) and (orientation: portrait) {
+    body.front-page section {
+      height: 667px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 375px) and (device-height: 667px) and (orientation: landscape) {
+    body.front-page section {
+      height: 375px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 414px) and (device-height: 736px) and (orientation: portrait) {
+    body.front-page section {
+      height: 736px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 414px) and (device-height: 736px) and (orientation: landscape) {
+    body.front-page section {
+      height: 414px; } }
+body.front-page section.cover {
+  background-color: #ffffff; }
+  body.front-page section.cover .container {
+    min-height: inherit;
+    height: inherit; }
+  body.front-page section.cover header h1 {
+    position: relative;
+    margin-top: 5rem;
+    width: 10rem;
+    overflow: hidden; }
+    body.front-page section.cover header h1 img {
+      width: inherit; }
+    body.front-page section.cover header h1 span {
+      position: absolute;
+      left: 9999px; }
+  body.front-page section.cover h2.tagline {
+    font-size: 5rem;
+    color: #3d245c;
+    padding-bottom: 0.8em;
+    background-image: url("../img/waves.svg");
+    background-size: 100% auto;
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%; }
+body.front-page section.about {
+  background-color: #3d245c;
+  color: #ffffff; }
+  body.front-page section.about .container {
+    top: 50%;
+    transform: translateY(-50%); }
+  body.front-page section.about header {
+    margin: 0 2.5rem;
+    padding-bottom: 2.5rem; }
+    body.front-page section.about header h2 {
+      font-size: 3.5rem;
+      line-height: 1.2em; }
+      body.front-page section.about header h2 span {
+        display: block; }
+        body.front-page section.about header h2 span:last-child {
+          color: #ffcc33; }
+  body.front-page section.about p {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    padding: 0 2.5rem; }
+
+@media screen and (max-width: 960px) {
+  div.container,
+  .container {
+    width: auto; }
+
+  body.front-page section {
+    height: 100vw; } }
+  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    body.front-page section {
+      height: 768px; } }
+  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+    body.front-page section {
+      height: 1024px; } }
+  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 480px) and (orientation: portrait) {
+    body.front-page section {
+      height: 320px; } }
+  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 480px) and (orientation: landscape) {
+    body.front-page section {
+      height: 480px; } }
+  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) {
+    body.front-page section {
+      height: 320px; } }
+  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 568px) and (orientation: landscape) {
+    body.front-page section {
+      height: 568px; } }
+  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 375px) and (device-height: 667px) and (orientation: portrait) {
+    body.front-page section {
+      height: 375px; } }
+  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 375px) and (device-height: 667px) and (orientation: landscape) {
+    body.front-page section {
+      height: 667px; } }
+  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 414px) and (device-height: 736px) and (orientation: portrait) {
+    body.front-page section {
+      height: 414px; } }
+  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 414px) and (device-height: 736px) and (orientation: landscape) {
+    body.front-page section {
+      height: 736px; } }
+@media screen and (max-width: 960px) {
+  body.front-page section.cover .container {
+    padding: 2.5rem; }
+  body.front-page section.cover header h1 {
+    margin-top: 2.5rem; }
+  body.front-page section.cover h2.tagline {
+    font-size: 12vw; }
+  body.front-page section.about {
+    padding: 0; }
+    body.front-page section.about header h2 {
+      font-size: 8vw; } }
