@@ -182,7 +182,7 @@ body.front-page footer.main-footer {
     body.front-page footer.main-footer {
       height: 414px; } }
 body.front-page section.cover {
-  background-color: #ffffff; }
+  background: #ffffff url(../img/cover.png) center center no-repeat; }
   body.front-page section.cover .container {
     min-height: inherit;
     height: inherit; }

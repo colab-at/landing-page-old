@@ -88,7 +88,7 @@ body.front-page {
     }
 
     section.cover {
-        background-color: $white;
+        background: $white url(../img/cover.png) center center no-repeat;
 
         .container {
             min-height: inherit;
