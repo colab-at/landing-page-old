@@ -8,7 +8,7 @@
 html {
     font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
     font-size: 100%;
-    color: #333;
+    color: #666;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -21,17 +21,66 @@ div.container,
 .container {
     position: relative;
     @include clearfix;
-    width: 960px;
+    width: $mid;
     margin: 0 auto;
 }
 
 h1, h2, h3 {
     font-weight: $bold;
 }
+
+.button,
+a.button {
+    display: block;
+    padding: 1em 3em;
+    border: 2px solid $white;
+    border-radius: 0.5em;
+    background-color: transparent;
+
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+    font-weight: 700;
+
+    &:hover {
+        background-color: $white;
+        border-color: $white !important;
+        color: $red;
+    }
+}
+
+form {
+
+    label {
+        display: none;
+    }
+
+    input {
+        display: block;
+        padding: 1rem;
+        border: none;
+        border-radius: 0.5em;
+        background-color: $white;
+        float: left;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .hide {
+        position: absolute; 
+        left: -5000px;
+    }
+
+    .response {
+        display: none;
+    }
+}
 //
 body.front-page {
 
-    section {
+    section.section,
+    section.cover,
+    footer.main-footer {
         position: relative;
         min-height: 40rem;
         @include viewport-unit(height, 100vh);
@@ -63,52 +112,170 @@ body.front-page {
             }
         }
         h2.tagline {
-            font-size: 5rem;
-            color: $purple;
-            padding-bottom: 0.8em;
-
-            background-image: url("../img/waves.svg");
-            background-size: 100% auto;
-            background-position: 0 bottom;
-            background-repeat: no-repeat;
-
+            font-size: 4.5rem;
+            color: $red;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);        
-            top: 40%;
+            top: 50%;
         }
     }
 
-    section.about {
-        background-color: $purple;
+    section.section {
+        
         color: $white;
 
         .container {
             top: 50%;
-            transform: translateY(-50%);        
-        }
+            transform: translateY(-50%);
 
-        header {
-            margin: 0 $padding-normal;
-            padding-bottom: $padding-normal;
-            h2 {
-                font-size: 3.5rem;
-                line-height: 1.2em;
-                span {
-                    display: block;
+            & > header {
+                margin: 0 $padding-normal;
+                padding-bottom: $padding-normal;
 
-                    &:last-child {
-                        color: $yellow;
+                h2 {
+                    font-size: 3.5rem;
+                    line-height: 1.2em;
+                    span {
+                        display: block;
+
+                        &:last-child {
+                            color: $blue;
+                        }
                     }
                 }
+
             }
         }
+
+        
 
         p {
             font-size: 1.2rem;
             line-height: 1.5em;
-            padding: 0 $padding-normal;
+            padding: 0 $padding-normal 1em $padding-normal;
         }
+
+        &.about {
+            background-color: $red;
+
+            a.button.manifesto {
+                border-color: $blue;
+                color: $blue;
+                float: right;
+                margin: 2rem;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+
+        }
+
+        &.join {
+            background-color: $blue;
+
+            header h2 {
+                color: $red;
+            }
+
+            a.button {
+                border-color: $red;
+                color: $red;
+                float: right;
+                margin: 2rem;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+
+    footer.main-footer {
+
+        header {
+            h3 {
+                font-size: 2rem;
+                color: $red;
+                padding: 0 $padding-normal 0.5em $padding-normal;
+            }
+            p {
+                padding: 0 $padding-normal;
+            }
+        }
+
+        .sign-up {
+            margin-top: 8rem;
+            position: relative;
+            @include clearfix;
+
+            header,
+            div.form {
+                width: $mid / 2;
+                float: left;
+            }
+
+            form {
+                overflow: hidden;
+
+                input {
+                    margin-bottom: 0.7rem;
+                    background-color: #f3f3f3;
+                    &.email {
+                        width: ($mid / 2) - 4rem;
+                    }
+                    &.name {
+                        width: ($mid / 4) - 3rem;
+                        &.first {
+                            @include border-right-radius(0);
+                        }
+                        &.last {
+                            @include border-left-radius(0);
+                        }
+                    }
+                    &.button {
+                        float: right;
+                        margin: 0 2rem;
+                        background-color: $red;
+                        border-color: $red;
+                        color: $white;
+                        &:hover {
+                            background-color: transparent;
+                            border-color: $red !important;
+                            color: $red;
+                        }
+                    }
+                }
+
+                
+            }
+
+            ul.links {
+                position: absolute;
+                left: $padding-normal;
+                bottom: 0;
+
+                li {
+                    float: left;
+                    margin-right: 2em;
+                    a {
+                        display: block;
+                        width: 2.5rem; height: 2.5rem;
+                        overflow: hidden;
+
+                        img {
+                            width: inherit;
+                            height: inherit;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        
     }
 }
 
