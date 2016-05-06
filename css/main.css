@@ -98,8 +98,8 @@ a.button {
   background-color: transparent;
   text-decoration: none;
   text-align: center;
-  color: #ffffff;
-  font-weight: 700; }
+  font-weight: 700;
+  color: #ffffff; }
   .button:hover,
   a.button:hover {
     background-color: #ffffff;
@@ -203,6 +203,23 @@ body.front-page section.cover {
     left: 50%;
     transform: translateX(-50%);
     top: 50%; }
+  body.front-page section.cover a.video {
+    display: block;
+    background: transparent url(../img/icon_video.png) center center no-repeat;
+    background-size: contain;
+    line-height: 4rem;
+    margin: 2rem auto 2rem auto;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ff6633;
+    overflow: hidden; }
+    body.front-page section.cover a.video span {
+      color: transparent; }
+    body.front-page section.cover a.video:hover {
+      background-image: url(../img/icon_video_hover.png); }
 body.front-page section.section {
   color: #ffffff; }
   body.front-page section.section .container {
@@ -223,7 +240,9 @@ body.front-page section.section {
     line-height: 1.5em;
     padding: 0 2.5rem 1em 2.5rem; }
   body.front-page section.section.about {
-    background-color: #ff6633; }
+    background-color: #ff6633;
+    position: relative;
+    overflow: visible; }
     body.front-page section.section.about a.button.manifesto {
       border-color: #23cedb;
       color: #23cedb;

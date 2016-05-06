@@ -39,8 +39,8 @@ a.button {
 
     text-decoration: none;
     text-align: center;
-    color: $white;
     font-weight: 700;
+    color: $white;
 
     &:hover {
         background-color: $white;
@@ -119,6 +119,33 @@ body.front-page {
             transform: translateX(-50%);        
             top: 50%;
         }
+
+        a.video {
+            display: block;
+            background: transparent url(../img/icon_video.png) center center no-repeat;
+            background-size: contain;
+            line-height: 4rem;
+            margin: 2rem auto 2rem auto;
+
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 500;
+            color: $red;
+
+            overflow: hidden;
+
+            span {
+                color: transparent;
+            }
+
+            &:hover {
+                background-image: url(../img/icon_video_hover.png);
+            }
+        }
+
+        
     }
 
     section.section {
@@ -158,6 +185,8 @@ body.front-page {
 
         &.about {
             background-color: $red;
+            position: relative;
+            overflow: visible;
 
             a.button.manifesto {
                 border-color: $blue;
@@ -169,6 +198,8 @@ body.front-page {
                     color: $red;
                 }
             }
+
+            
 
         }
 

@@ -152,6 +152,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/icon_video.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1252,
+		"inputAbbreviatedPath": "\/img\/icon_video.png",
+		"outputAbbreviatedPath": "\/img\/icon_video.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icon_video_hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3648,
+		"inputAbbreviatedPath": "\/img\/icon_video_hover.png",
+		"outputAbbreviatedPath": "\/img\/icon_video_hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/instagram.png": {
 		"fileType": 32768,
 		"ignore": 0,
