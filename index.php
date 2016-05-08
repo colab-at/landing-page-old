@@ -11,11 +11,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/lity.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/normalize.min.css">
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/lity.min.css">
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <?php wp_head(); ?>
+
     </head>
     <body class="front-page">
         <!--[if lt IE 8]>
@@ -24,7 +27,7 @@
 
         <section class="cover">
             <div class="container">
-                <header><h1 class="logo"><img alt="Colab" src="img/logo_red.svg"><span>Colab</span></h1></header>
+                <header><h1 class="logo"><img alt="Colab" src="<?php echo get_template_directory_uri() ?>/img/logo_red.svg"><span>Colab</span></h1></header>
                 <h2 class="tagline">
                     radical <br>collaboration
                     <a class="video" href="https://www.youtube.com/embed/1WcJvbiNnVQ" data-lity><span>Play video</span></a>
@@ -72,23 +75,21 @@
                 <span class="button-bkg"><a class="button join" href="http://eepurl.com/b0WAyX">Join</a></span>
 
                 <ul class="links">
-                    <li><a href="https://blog.colab.at/latest"><img src="img/medium.png" title="Medium" /></a></li>
-                    <li><a href="https://facebook.com/colab.at"><img src="img/facebook.png" title="Facebook" /></a></li>
-                    <li><a href="https://twitter.com/colab_at"><img src="img/twitter.png" title="Twitter" /></a></li>
-                    <li><a href="https://instagram.com/colab_at/"><img src="img/instagram.png" title="Instagram" /></a></li>
+                    <li><a href="https://blog.colab.at/latest"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/medium.png" title="Medium" /></a></li>
+                    <li><a href="https://facebook.com/colab.at"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png" title="Facebook" /></a></li>
+                    <li><a href="https://twitter.com/colab_at"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png" title="Twitter" /></a></li>
+                    <li><a href="https://instagram.com/colab_at/"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/instagram.png" title="Instagram" /></a></li>
                 </ul>
-
 
             </div>
         </footer>
 
-
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
-        <script src="js/plugins.js"></script>
-        <script src="js/vendor/lity.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="<?php bloginfo('stylesheet_directory'); ?>/js/plugins.js"></script>
+        <script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/lity.min.js"></script>
+        <script src="<?php bloginfo('stylesheet_directory'); ?>/js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -99,5 +100,7 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-77436614-1','auto');ga('send','pageview');
         </script>
+
+        <?php wp_footer(); ?>
     </body>
 </html>

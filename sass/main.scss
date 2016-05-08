@@ -117,7 +117,7 @@ body.front-page {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);        
-            top: 50%;
+            top: 47%;
         }
 
         a.video {
@@ -155,27 +155,18 @@ body.front-page {
         .container {
             top: 50%;
             transform: translateY(-50%);
-
-            & > header {
-                margin: 0 $padding-normal;
-                padding-bottom: $padding-normal;
-
-                h2 {
-                    font-size: 3.5rem;
-                    line-height: 1.2em;
-                    span {
-                        display: block;
-
-                        &:last-child {
-                            color: $blue;
-                        }
-                    }
-                }
-
-            }
         }
 
-        
+        header {
+            margin: 0 $padding-normal;
+            padding-bottom: $padding-normal;
+
+            h2 {
+                font-size: 3.5rem;
+                line-height: 1.2em;
+            }
+
+        }
 
         p {
             font-size: 1.2rem;
@@ -188,33 +179,53 @@ body.front-page {
             position: relative;
             overflow: visible;
 
+            header {
+                h2 {
+                    span {
+                        display: block;
+                        &:last-child {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+
+            span.button-bkg {
+                background: transparent url(../img/icon_hand.png) center top no-repeat;
+                padding-top: 70px;
+                display:block; 
+                float: right;
+            }
+
             a.button.manifesto {
                 border-color: $blue;
                 color: $blue;
-                float: right;
-                margin: 2rem;
+                width: 20%;
+                margin: 2rem auto 0 auto;
 
                 &:hover {
                     color: $red;
                 }
             }
-
-            
-
         }
 
         &.join {
             background-color: $blue;
 
-            header h2 {
-                color: $red;
+            header {
+                h2 {
+                    color: $white;
+                    span {
+                        color: $red;
+                    }
+                }
             }
 
             a.button {
                 border-color: $red;
                 color: $red;
-                float: right;
-                margin: 2rem;
+                width: 20%;
+                margin: 2rem auto 0 auto;
 
                 &:hover {
                     color: $blue;
@@ -225,27 +236,47 @@ body.front-page {
 
     footer.main-footer {
 
-        header {
-            h3 {
-                font-size: 2rem;
-                color: $red;
-                padding: 0 $padding-normal 0.5em $padding-normal;
-            }
-            p {
-                padding: 0 $padding-normal;
-            }
-        }
+        .container {
+            top: 50%;
+            transform: translateY(-50%);
 
-        .sign-up {
-            margin-top: 8rem;
-            position: relative;
-            @include clearfix;
+            header {
+                text-align: center;
+                h2 {
+                    font-size: 3.5rem;
+                    line-height: 1.2em;
+                    color: $red;
+                    padding: 0 $padding-normal 0.5em $padding-normal;
 
-            header,
-            div.form {
-                width: $mid / 2;
-                float: left;
+                }
+                p {
+                    font-size: 1.2rem;
+                    line-height: 1.5em;
+                    padding: 0 $padding-normal 1em $padding-normal;
+                }
             }
+
+            span.button-bkg {
+                background: transparent url(../img/icon_hand_orange.png) center top no-repeat;
+                padding-top: 70px;
+                display:block;
+                margin-top: 2rem;
+            }
+
+            a.button {
+                background-color: $red;
+                border-color: $red;
+                color: $white;
+                width: 20%;
+                margin: 0 auto;
+                &:hover {
+                    background-color: transparent;
+                    border-color: $red !important;
+                    color: $red;
+                }
+            }
+
+            /*
 
             form {
                 overflow: hidden;
@@ -278,18 +309,16 @@ body.front-page {
                         }
                     }
                 }
-
-                
             }
+            */
 
             ul.links {
-                position: absolute;
-                left: $padding-normal;
-                bottom: 0;
+                display: table; 
+                margin: 2rem auto;
 
                 li {
                     float: left;
-                    margin-right: 2em;
+                    margin: 0 1em;
                     a {
                         display: block;
                         width: 2.5rem; height: 2.5rem;
@@ -305,8 +334,6 @@ body.front-page {
 
 
         }
-
-        
     }
 }
 

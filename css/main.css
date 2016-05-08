@@ -202,7 +202,7 @@ body.front-page section.cover {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 50%; }
+    top: 47%; }
   body.front-page section.cover a.video {
     display: block;
     background: transparent url(../img/icon_video.png) center center no-repeat;
@@ -225,16 +225,12 @@ body.front-page section.section {
   body.front-page section.section .container {
     top: 50%;
     transform: translateY(-50%); }
-    body.front-page section.section .container > header {
-      margin: 0 2.5rem;
-      padding-bottom: 2.5rem; }
-      body.front-page section.section .container > header h2 {
-        font-size: 3.5rem;
-        line-height: 1.2em; }
-        body.front-page section.section .container > header h2 span {
-          display: block; }
-          body.front-page section.section .container > header h2 span:last-child {
-            color: #23cedb; }
+  body.front-page section.section header {
+    margin: 0 2.5rem;
+    padding-bottom: 2.5rem; }
+    body.front-page section.section header h2 {
+      font-size: 3.5rem;
+      line-height: 1.2em; }
   body.front-page section.section p {
     font-size: 1.2rem;
     line-height: 1.5em;
@@ -243,85 +239,111 @@ body.front-page section.section {
     background-color: #ff6633;
     position: relative;
     overflow: visible; }
+    body.front-page section.section.about header h2 span {
+      display: block; }
+      body.front-page section.section.about header h2 span:last-child {
+        color: #23cedb; }
+    body.front-page section.section.about span.button-bkg {
+      background: transparent url(../img/icon_hand.png) center top no-repeat;
+      padding-top: 70px;
+      display: block;
+      float: right; }
     body.front-page section.section.about a.button.manifesto {
       border-color: #23cedb;
       color: #23cedb;
-      float: right;
-      margin: 2rem; }
+      width: 20%;
+      margin: 2rem auto 0 auto; }
       body.front-page section.section.about a.button.manifesto:hover {
         color: #ff6633; }
   body.front-page section.section.join {
     background-color: #23cedb; }
     body.front-page section.section.join header h2 {
-      color: #ff6633; }
+      color: #ffffff; }
+      body.front-page section.section.join header h2 span {
+        color: #ff6633; }
     body.front-page section.section.join a.button {
       border-color: #ff6633;
       color: #ff6633;
-      float: right;
-      margin: 2rem; }
+      width: 20%;
+      margin: 2rem auto 0 auto; }
       body.front-page section.section.join a.button:hover {
         color: #23cedb; }
-body.front-page footer.main-footer header h3 {
-  font-size: 2rem;
-  color: #ff6633;
-  padding: 0 2.5rem 0.5em 2.5rem; }
-body.front-page footer.main-footer header p {
-  padding: 0 2.5rem; }
-body.front-page footer.main-footer .sign-up {
-  margin-top: 8rem;
-  position: relative;
-  overflow: hidden;
-  *zoom: 1; }
-  body.front-page footer.main-footer .sign-up header,
-  body.front-page footer.main-footer .sign-up div.form {
-    width: 30rem;
-    float: left; }
-  body.front-page footer.main-footer .sign-up form {
-    overflow: hidden; }
-    body.front-page footer.main-footer .sign-up form input {
-      margin-bottom: 0.7rem;
-      background-color: #f3f3f3; }
-      body.front-page footer.main-footer .sign-up form input.email {
-        width: 26rem; }
-      body.front-page footer.main-footer .sign-up form input.name {
-        width: 12rem; }
-        body.front-page footer.main-footer .sign-up form input.name.first {
-          -moz-border-radius-topright: 0;
-          -webkit-border-top-right-radius: 0;
-          border-top-right-radius: 0;
-          -moz-border-radius-bottomright: 0;
-          -webkit-border-bottom-right-radius: 0;
-          border-bottom-right-radius: 0; }
-        body.front-page footer.main-footer .sign-up form input.name.last {
-          -moz-border-radius-topleft: 0;
-          -webkit-border-top-left-radius: 0;
-          border-top-left-radius: 0;
-          -moz-border-radius-bottomleft: 0;
-          -webkit-border-bottom-left-radius: 0;
-          border-bottom-left-radius: 0; }
-      body.front-page footer.main-footer .sign-up form input.button {
-        float: right;
-        margin: 0 2rem;
-        background-color: #ff6633;
-        border-color: #ff6633;
-        color: #ffffff; }
-        body.front-page footer.main-footer .sign-up form input.button:hover {
-          background-color: transparent;
-          border-color: #ff6633 !important;
-          color: #ff6633; }
-  body.front-page footer.main-footer .sign-up ul.links {
-    position: absolute;
-    left: 2.5rem;
-    bottom: 0; }
-    body.front-page footer.main-footer .sign-up ul.links li {
+body.front-page footer.main-footer .container {
+  top: 50%;
+  transform: translateY(-50%);
+            /*
+
+            form {
+                overflow: hidden;
+
+                input {
+                    margin-bottom: 0.7rem;
+                    background-color: #f3f3f3;
+                    &.email {
+                        width: ($mid / 2) - 4rem;
+                    }
+                    &.name {
+                        width: ($mid / 4) - 3rem;
+                        &.first {
+                            @include border-right-radius(0);
+                        }
+                        &.last {
+                            @include border-left-radius(0);
+                        }
+                    }
+                    &.button {
+                        float: right;
+                        margin: 0 2rem;
+                        background-color: $red;
+                        border-color: $red;
+                        color: $white;
+                        &:hover {
+                            background-color: transparent;
+                            border-color: $red !important;
+                            color: $red;
+                        }
+                    }
+                }
+            }
+            */ }
+  body.front-page footer.main-footer .container header {
+    text-align: center; }
+    body.front-page footer.main-footer .container header h2 {
+      font-size: 3.5rem;
+      line-height: 1.2em;
+      color: #ff6633;
+      padding: 0 2.5rem 0.5em 2.5rem; }
+    body.front-page footer.main-footer .container header p {
+      font-size: 1.2rem;
+      line-height: 1.5em;
+      padding: 0 2.5rem 1em 2.5rem; }
+  body.front-page footer.main-footer .container span.button-bkg {
+    background: transparent url(../img/icon_hand_orange.png) center top no-repeat;
+    padding-top: 70px;
+    display: block;
+    margin-top: 2rem; }
+  body.front-page footer.main-footer .container a.button {
+    background-color: #ff6633;
+    border-color: #ff6633;
+    color: #ffffff;
+    width: 20%;
+    margin: 0 auto; }
+    body.front-page footer.main-footer .container a.button:hover {
+      background-color: transparent;
+      border-color: #ff6633 !important;
+      color: #ff6633; }
+  body.front-page footer.main-footer .container ul.links {
+    display: table;
+    margin: 2rem auto; }
+    body.front-page footer.main-footer .container ul.links li {
       float: left;
-      margin-right: 2em; }
-      body.front-page footer.main-footer .sign-up ul.links li a {
+      margin: 0 1em; }
+      body.front-page footer.main-footer .container ul.links li a {
         display: block;
         width: 2.5rem;
         height: 2.5rem;
         overflow: hidden; }
-        body.front-page footer.main-footer .sign-up ul.links li a img {
+        body.front-page footer.main-footer .container ul.links li a img {
           width: inherit;
           height: inherit; }
 
