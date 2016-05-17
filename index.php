@@ -30,7 +30,7 @@
                 <header><h1 class="logo"><img alt="Colab" src="<?php echo get_template_directory_uri() ?>/img/logo_red.svg"><span>Colab</span></h1></header>
                 <h2 class="tagline">
                     radical <br>collaboration
-                    <a class="video" href="https://www.youtube.com/embed/1WcJvbiNnVQ" data-lity><span>Play video</span></a>
+                    <a class="video" href="https://youtu.be/CeTxaGCG1mE" data-lity><span>Play video</span></a>
                 </h2>
 
             </div>
