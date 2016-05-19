@@ -351,26 +351,32 @@ body.front-page {
     body.front-page {
         .section {
 
+            height: auto !important;
+            padding: $padding-normal 0;
+
+            .container {
+                top: auto !important;
+                transform: none !important;
+            }
+
             header h2 {
                 font-size: 2rem !important;
             }
 
             &.cover {
                 background-size: auto 140%;
+                padding: 0 !important;
 
                 h2.tagline {
                     font-size: 3rem !important;
                 }
             }
 
-            &.about {
-                padding: 2rem 0 4rem 0;
-            }
-            &.join {
-                padding: 4rem 0 16rem 0;
-            }
+            
         }
     }
 
 
 }//@media $mid
+
+

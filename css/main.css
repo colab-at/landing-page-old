@@ -354,13 +354,16 @@ body.front-page footer.main-footer .container {
   .container {
     width: 100%; }
 
-  body.front-page .section header h2 {
-    font-size: 2rem !important; }
-  body.front-page .section.cover {
-    background-size: auto 140%; }
-    body.front-page .section.cover h2.tagline {
-      font-size: 3rem !important; }
-  body.front-page .section.about {
-    padding: 2rem 0 4rem 0; }
-  body.front-page .section.join {
-    padding: 4rem 0 16rem 0; } }
+  body.front-page .section {
+    height: auto !important;
+    padding: 2.5rem 0; }
+    body.front-page .section .container {
+      top: auto !important;
+      transform: none !important; }
+    body.front-page .section header h2 {
+      font-size: 2rem !important; }
+    body.front-page .section.cover {
+      background-size: auto 140%;
+      padding: 0 !important; }
+      body.front-page .section.cover h2.tagline {
+        font-size: 3rem !important; } }
