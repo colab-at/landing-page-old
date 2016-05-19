@@ -49,7 +49,7 @@
                 </header>
                 
                 <p>Radical collaboration is about ordinary people working together to make extraordinary things. It is about opening the way we do things so we can learn with each other's ideas and build better ones on top of those. We all have diverse characteristics, passions and skills and when we put them together they become a superpower for bringing ideas to life.</p>
-                <a class="button manifesto" href="">Our manifesto</a>
+                <a class="button manifesto" href="https://medium.com/@colab_at/a-manifesto-for-radical-collaboration-c6c9c561c989#.jeumgcsmq">Our manifesto</a>
             </div>
         </section>
 
@@ -59,7 +59,7 @@
                     <h2><span>Colab</span> is a collaborative effort to bring people together around great ideas. </h2>
                 </header>
                 <p>Think of every time you wanted to start something but didn’t know where to start, or felt that there just weren’t enough people around that shared the same passion. Think of every time your team was stuck and a fresh input from someone else would help you move forward. Imagine if you could share your ideas, get help in making them happen and at the same time contribute to the ideas of others in a simple way. Imagine the difference it would make if you could contribute to the ideas that mattered the most to you and make them your own. That’s what we are doing here. Join us.</p>
-                <a class="button" href="">Read the story</a>
+                <a class="button" href="https://medium.com/@colab_at/upgrade-collaboration-67025f6945dd#.cujro3aib">Read the story</a>
 
             </div>
         </section>
