@@ -72,7 +72,9 @@ html {
   font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
   font-size: 100%;
   color: #666;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0 !important;
+  padding-top: 0 !important; }
 
 body {
   position: relative;
@@ -127,11 +129,11 @@ body.front-page section.section,
 body.front-page section.cover,
 body.front-page footer.main-footer {
   position: relative;
-  /*min-height: 40rem;*/
-  min-height: 100vh;
+  min-height: 40rem;
+  height: 100vh;
   overflow: hidden;
   *zoom: 1; }
-  /*@media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
     body.front-page section.section,
     body.front-page section.cover,
     body.front-page footer.main-footer {
@@ -180,13 +182,12 @@ body.front-page footer.main-footer {
     body.front-page section.section,
     body.front-page section.cover,
     body.front-page footer.main-footer {
-      height: 414px; } }*/
+      height: 414px; } }
 body.front-page section.cover {
   background: #ffffff url(../img/cover.png) center center no-repeat; }
   body.front-page section.cover .container {
     min-height: inherit;
-    height: inherit;
-    padding-bottom: 20%; }
+    height: inherit; }
   body.front-page section.cover header h1 {
     position: relative;
     margin-top: 5rem;
@@ -224,10 +225,8 @@ body.front-page section.cover {
 body.front-page section.section {
   color: #ffffff; }
   body.front-page section.section .container {
-    /*top: 50%;
-    transform: translateY(-50%);*/
-    padding-top: 10%;
-    padding-bottom: 10%; }
+    top: 50%;
+    transform: translateY(-50%); }
   body.front-page section.section header {
     margin: 0 2.5rem;
     padding-bottom: 2.5rem; }
@@ -272,10 +271,8 @@ body.front-page section.section {
       body.front-page section.section.join a.button:hover {
         color: #23cedb; }
 body.front-page footer.main-footer .container {
-  /*top: 50%;
-  transform: translateY(-50%);*/
-  padding-top: 10%;
-  padding-bottom: 10%;
+  top: 50%;
+  transform: translateY(-50%);
             /*
 
             form {
@@ -355,49 +352,15 @@ body.front-page footer.main-footer .container {
 @media screen and (max-width: 960px) {
   div.container,
   .container {
-    width: auto; }
+    width: 100%; }
 
-/*  body.front-page section {
-    height: 100vw; } }
-  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
-    body.front-page section {
-      height: 768px; } }
-  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
-    body.front-page section {
-      height: 1024px; } }
-  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 480px) and (orientation: portrait) {
-    body.front-page section {
-      height: 320px; } }
-  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 480px) and (orientation: landscape) {
-    body.front-page section {
-      height: 480px; } }
-  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) {
-    body.front-page section {
-      height: 320px; } }
-  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 568px) and (orientation: landscape) {
-    body.front-page section {
-      height: 568px; } }
-  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 375px) and (device-height: 667px) and (orientation: portrait) {
-    body.front-page section {
-      height: 375px; } }
-  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 375px) and (device-height: 667px) and (orientation: landscape) {
-    body.front-page section {
-      height: 667px; } }
-  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 414px) and (device-height: 736px) and (orientation: portrait) {
-    body.front-page section {
-      height: 414px; } }
-  @media only screen and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1) and (device-width: 414px) and (device-height: 736px) and (orientation: landscape) {
-    body.front-page section {
-      height: 736px; }*/ }
-@media screen and (max-width: 960px) {
-  body.front-page section.cover .container {
-    padding: 2.5rem;
-    padding-bottom: 30%; }
-  body.front-page section.cover header h1 {
-    margin-top: 2.5rem; }
-  body.front-page section.cover h2.tagline {
-    font-size: 12vw; }
-  body.front-page section.about {
-    padding: 0; }
-    body.front-page section.about header h2 {
-      font-size: 8vw; } }
+  body.front-page .section header h2 {
+    font-size: 2rem !important; }
+  body.front-page .section.cover {
+    background-size: auto 140%; }
+    body.front-page .section.cover h2.tagline {
+      font-size: 3rem !important; }
+  body.front-page .section.about {
+    padding: 2rem 0 4rem 0; }
+  body.front-page .section.join {
+    padding: 4rem 0 16rem 0; } }

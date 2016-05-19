@@ -25,8 +25,9 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <section class="cover">
+        <section class="section cover">
             <div class="container">
+
                 <header><h1 class="logo"><img alt="Colab" src="<?php echo get_template_directory_uri() ?>/img/logo_red.svg"><span>Colab</span></h1></header>
                 <h2 class="tagline">
                     radical <br>collaboration
@@ -37,7 +38,6 @@
         </section>
 
         <section class="section about">
-
             <div class="container">
 
                 <header>
@@ -55,21 +55,22 @@
 
         <section class="section join">
             <div class="container">
+
                 <header>
                     <h2><span>Colab</span> is a collaborative effort to bring people together around great ideas. </h2>
                 </header>
-                <p>Think of every time you wanted to start something but didn’t know where to start, or felt that there just weren’t enough people around that shared the same passion. Think of every time your team was stuck and a fresh input from someone else would help you move forward. Imagine if you could share your ideas, get help in making them happen and at the same time contribute to the ideas of others in a simple way. Imagine the difference it would make if you could contribute to the ideas that mattered the most to you and make them your own. That’s what we are doing here. Join us.</p>
+                <p>Think of every time you wanted to start something but didn’t know where to start, or felt that there just weren’t enough people around that shared the same passion. Think of every time your team was stuck and a fresh input from someone else would help you move forward. Imagine if you could share your ideas, get help in making them happen and at the same time contribute to the ideas of others in a simple way. Imagine the difference it would make if you could contribute to the ideas that mattered the most to you and make them your own. That’s what we are doing here.</p>
                 <a class="button" href="https://medium.com/@colab_at/upgrade-collaboration-67025f6945dd#.cujro3aib">Read the story</a>
 
             </div>
         </section>
 
-        <footer class="main-footer">
+        <footer class="section main-footer">
             <div class="container">
             
                 <header>
                     <h2>join us in making <br>this idea happen</h3>
-                    <p>Now, we want to open Colab to everyone and hopefully you’ll join us.</p>
+                    <p>We're upgrading Colab. Want to help? Join the movement.</p>
                 </header>
 
                 <span class="button-bkg"><a class="button join" href="http://eepurl.com/b0WAyX">Join</a></span>

@@ -10,6 +10,8 @@ html {
     font-size: 100%;
     color: #666;
     -webkit-font-smoothing: antialiased;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 body {
@@ -343,35 +345,32 @@ body.front-page {
 
     div.container,
     .container {
-        width: auto;
+        width: 100%;
     }
 
     body.front-page {
-        section {
-            @include viewport-unit(height, 100vw);
-            
-        }
-        section.cover {
-            .container {
-                padding: $padding-normal;
+        .section {
+
+            header h2 {
+                font-size: 2rem !important;
             }
-            header {
-                h1 {
-                    margin-top: $padding-normal;
+
+            &.cover {
+                background-size: auto 140%;
+
+                h2.tagline {
+                    font-size: 3rem !important;
                 }
             }
-            h2.tagline {
-                font-size: 12vw;
+
+            &.about {
+                padding: 2rem 0 4rem 0;
+            }
+            &.join {
+                padding: 4rem 0 16rem 0;
             }
         }
-        section.about {
-            padding: 0;
-            header {
-                h2 {
-                    font-size: 8vw;
-               }
-            } 
-        }
     }
+
 
 }//@media $mid
